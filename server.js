@@ -11,7 +11,7 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://Sunil:MiruHansda146@cluster0.zehoob9.mongodb.net/keeper-app?retryWrites=true&w=majority")
+mongoose.connect(DATABASE_URL)
     .then(console.log("Connected to MongoDB"))
     .catch((err) => console.log(err));
 
